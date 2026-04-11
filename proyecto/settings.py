@@ -27,7 +27,13 @@ SECRET_KEY = 'django-insecure-pv8le^3t+isg=mgy!)w08yvuq(&30h&j*cuocuj^4sq9y!0!pd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tercera-entrega-ayala-maximiliano-85000.onrender.com',]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://tercera-entrega-ayala-maximiliano-85000.onrender.com'
+]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 # Application definition
@@ -127,3 +133,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 if not DEBUG:
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
+
