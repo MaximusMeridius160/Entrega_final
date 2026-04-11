@@ -1,0 +1,13 @@
+service:
+  type: web
+
+  name: proyecto
+  runtime: python
+  plan: free
+  region: oregon
+  branch: main
+
+  buildComand:  "./build.sh"
+
+  startcommand: gunicorn proyecto.wsgi:application
+
