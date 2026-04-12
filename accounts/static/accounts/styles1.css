@@ -264,6 +264,10 @@ main {
     background-color: white;
 }
 
+h2{
+    color: white;
+}
+
 h4{ 
     display: flex;
     justify-content: center;
