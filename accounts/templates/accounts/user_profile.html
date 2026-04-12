@@ -75,7 +75,7 @@
                 <form method="POST" enctype="multipart/form-data" >
                     {% csrf_token %}
                         <img id="previewAvatar" 
-                            src="{% if request.user.avatar.image %}{{ request.user.avatar.image.url }}{% else %}{% static 'accounts/images/default-avatar.png' %}{% endif %}" 
+                            src="{% if avatar.image %}{{ avatar.image.url }}{% else %}{% static 'accounts/images/default-avatar.png' %}{% endif %}" 
                             class="avatar-img">
                     {{ form_avatar.as_p }}
 
@@ -113,7 +113,7 @@
                     <h4>Avatar</h4>
                 
                     {% if request.user.avatar and request.user.avatar.image %}
-                        <img src="{{ request.user.avatares.image.url }}" class="rounded-circle" >
+                        <img src="{{ avatar.image.url }}" class="rounded-circle" >
                     {% else %}
                         <img src="{% static 'accounts/images/avatar_default.jpg' %}" class="rounded-circle">
                     {% endif %}

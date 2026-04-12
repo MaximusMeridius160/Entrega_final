@@ -292,7 +292,8 @@ def user_profile(request):
 
     return render(request, "accounts/user_profile.html", {
         'form_user': form_user,
-        'form_avatar': form_avatar
+        'form_avatar': form_avatar,
+        'avatar': avatar
     })
 
 def cerrar_sesion(request):
