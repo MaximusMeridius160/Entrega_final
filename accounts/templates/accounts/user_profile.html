@@ -113,7 +113,7 @@
                     <h4>Avatar</h4>
                 
                     {% if request.user.avatar and request.user.avatar.image %}
-                        <img src="{{ request.user.avatar.image.url }}" class="rounded-circle" >
+                        <img src="{{  user.profile.avatar.url }}" alt="avatar" class="rounded-circle" >
                     {% else %}
                         <img src="{% static 'accounts/images/avatar_default.jpg' %}" class="rounded-circle">
                     {% endif %}
